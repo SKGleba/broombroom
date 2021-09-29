@@ -119,6 +119,7 @@ static const unsigned char tz_fudreset_sigma[] = {
 };
 
 // use the write primitive to add read32 and write32 smcs
+// code by Proxima
 static int patch_tz_peekpoke(k_root* kroot) {
     void (*dcl2wbivr)(void* va, uint32_t sz) = KFUN("SceSysmem", 0x1b1d4 | 1);
     if (!dcl2wbivr)
